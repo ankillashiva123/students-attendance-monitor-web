@@ -1,0 +1,44 @@
+<div class="user-registration-page">
+    <h1 style="color: #FFFFFF" align="center">User Registration</h1>
+    <div class="user-registration-container">
+       
+        <form name="registrationForm" ng-submit="vm.userRegistration(loginForm)" class="user-registration-form" method="post">
+            <div class="login-error">
+                <h4 ng-if="vm.error" style="color: red">{{vm.error}}</h4>
+            </div>
+            <div class="label-container">
+                <label>
+                    Fullname
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="Fullname" class="app-input" ng-change="vm.clearError()"  ng-model="vm.fullName" required>
+                <div ng-if="registrationForm.Fullname.$dirty && registrationForm.Fullname.$error.required" class="help-block">Fullname is required</div>
+            </div>
+            <div class="label-container">
+                <label for="email" classs="label-container">
+                    Email: * </label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="email" class="app-input" ng-model="vm.email"  name="email" value="" placeholder="Your Email" tabindex="2"
+                    required="required" />
+
+            </div>
+            <div class="label-container">
+                <label>
+                    Password
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="password" class="app-input" ng-change="vm.clearError()" id="password" ng-model="vm.Upwd" required>
+                <div ng-if="registrationForm.Upwd.$dirty && registrationForm.Upwd.$error.required" class="help-block">Password is required</div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="app-button"> Sign Up </button>
+            </div>
+            <div class="forgot-password-container">
+                <a ui-sref="login" class="forgot">Sign In?</a>
+            </div>
+        </form>
+    </div>
+</div>

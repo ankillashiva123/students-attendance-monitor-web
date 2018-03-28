@@ -1,0 +1,90 @@
+<div class="student-register-page" ">
+    <!--
+  ****************************************
+  Contest Entry for Treehouse:
+  "Design a Contact Form"
+  Submitted by Lisa Wagner
+  ****************************************
+-->
+
+    <div id="studentregister-form" class="student-registration-container">
+        <div>
+            <h1>Student Registration</h1>
+
+        </div>
+        <p id="failure">Oopsie...message not sent.</p>
+        <p id="success">Your message was sent successfully. Thank you!</p>
+
+        <form name="addStudent1" ng-submit="addStudent(addStudent1)" class="student-register-form">
+            <div classs="label-container">
+                <label for="firstname">
+                    FirstName: * </label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="text" ng-model="firstname" id="firstname" name="name" value="" placeholder="Your Name" required="required" tabindex="1"
+                    autofocus="autofocus" />
+
+            </div>
+            <div classs="label-container">
+                <label for="name" classs="label-container">
+                    secondName: *</label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="text" ng-model="secondname" id="secondname" name="secondname" value="" placeholder="Your Name" required="required"
+                    tabindex="1" autofocus="autofocus" />
+
+            </div>
+            <div classs="label-container">
+                <label for="rollnumber" classs="label-container">
+                    RollNo: *</label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="text" id="rollnumber" ng-model="rollnumber" name="rollnumber" value="" placeholder="Your RollNo" required="required"
+                    tabindex="1" autofocus="autofocus" />
+            </div>
+            <div classs="label-container">
+                <label for="rollnumber">
+                    Deparrment: *</label>
+            </div>
+            <div class="input-select-container">
+                    <select class="form-control" ng-model="department">
+                        <option value="" disabled selected>Please select department</option>
+                        <option ng-repeat="dept in vm.depts"> {{dept}}
+                        </option>
+                    </select>
+                </div>
+            <div class="label-container">
+                <label for="email" classs="label-container">
+                    Email: * </label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="email" ng-model="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required"/>
+
+            </div>
+            <div class="label-container">
+                <label for="contactnumber">
+                    ContactNumber: *</label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="number" ng-model="contactnumber" id="contactnumber" name="contactnumber" value="" placeholder="Your Number"
+                    tabindex="2" required="required" />
+
+            </div>
+            <div class="label-container">
+                <label for="email" classs="label-container">
+                    EmegencyNumber: * </label>
+            </div>
+            <div class="input-container">
+                <input class="app-input" type="number" id="EmegencyNumber" ng-model="EmegencyNumber" name="EmegencyNumber" value="" placeholder="Your Number"
+                    tabindex="2" required="required" />
+
+            </div>
+
+            <div class="button-container">
+                <button name="submit" type="submit" id="submit" class="app-button">SEND</button>
+            </div>
+    </div>
+    </form>
+
+</div>
+</div>

@@ -1,0 +1,34 @@
+<div class="login-page" ng-controller="LoginController">
+    <h1 style="color: #FFFFFF" align="center">Login</h1>
+    <div class="login-container">
+        <div class="login-error">
+        <h4 ng-if="vm.error" style="color: red">{{vm.error}}</h4></div>
+        <form name="loginForm" ng-submit="vm.login(loginForm)" class="login-form">
+
+            <div class="label-container">
+                <label>
+                    UserName
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="Username" ng-change="vm.clearError()" class="app-input" id="username" ng-model="vm.Uname" required>
+                <div ng-if="loginForm.Uname.$dirty && loginForm.Unamee.$error.required" class="help-block">Username is required</div>
+            </div>
+            <div class="label-container">
+                <label>
+                    Password
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="password" class="app-input" ng-change="vm.clearError()" id="password" ng-model="vm.Upwd" required>
+                <div ng-if="loginForm.Upwd.$dirty && loginForm.Upwd.$error.required" class="help-block">Password is required</div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="app-button"> Sign in </button>
+            </div>
+            <div class="forgot-password-container">
+               <a  ui-sref="userRegistration" class="forgot">Sign Up?</a> or  <a href="#" class="forgot">forgot password?</a>
+            </div>
+        </form>
+    </div>
+</div>

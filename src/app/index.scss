@@ -4,7 +4,356 @@
 
 body {
   font: normal 16px/150% Arial, Helvetica, sans-serif;
+  
 }
+
+html { height: 100% }
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+body { 
+background-color:white;
+margin:0px;
+padding: 0px;
+overflow: hidden;
+}
+.view-container {
+overflow-y: hidden;
+    overflow-x: hidden;
+    flex: 1;
+
+}
+input.app-input{
+  background: url('http://i.minus.com/ibhqW9Buanohx2.png') center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
+  border: 1px solid #a1a3a3;
+  border-radius: 4px;
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  color: #696969;
+  height: 39px;
+  padding-left: 10px;
+  transition: box-shadow 0.3s;
+  width: 100%;
+}
+input[type="password"]:focus, input[type="text"]:focus {
+  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+  outline: 0;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 16px;
+  
+  position: relative;
+  width: 64px;
+}
+input[type="checkbox"]:checked {
+  left: 29px;
+  width: 58px;
+}
+
+
+.shadow {
+  background: #000;
+  border-radius: 12px 12px 4px 4px;
+  box-shadow: 0 0 20px 10px #000;
+  height: 12px;
+  margin: 30px auto;
+  opacity: 0.2;
+  width: 270px;
+}
+
+
+
+
+/*LOGIN PAGE CSS */
+.login-page {
+  margin-top: 8%;
+}
+.login-form{
+  padding: 15px;
+}
+.login-error {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.login-container { 
+  background: #FFFFFF;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  min-height: 250px;
+  margin: 20px auto 0;
+  width: 450px;
+}
+
+.input-container {
+  margin: 10px 0 10px 0;
+}
+
+.input-select-container {
+  select{
+  width: 100%;
+  height: 40px;
+    border-radius: 3px;
+  }
+  option {
+
+  }
+}
+
+.label-container {
+  label {
+    font-size: 14px;
+    color: #717171
+  }
+}
+
+.button-container{
+  margin: 20px 0 20px 0;
+}
+.app-button {
+  width: 100%;
+  min-width: 100px;
+  height: 47px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: green;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  &:hover{
+    background-color: rgba(65, 212, 20, 0.534);
+  }
+}
+.forgot-password-container{
+  text-align: center;
+ a {
+    color: #0d5fdc;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .4s;
+    &:hover { 
+      color: #3b3b3b 
+    }
+  }
+}
+
+/* LOGIN PAGE CSS END*/
+/*ADD STUDENT CSS*/
+.student-register-page {
+
+  margin-top: 8%;
+}
+  .studentregister-form{
+  background-color: white;
+  padding: 7px;
+  width: 600px;
+  border-radius: 7px;
+  }
+  .student-registration-container
+  {
+    background: #FFFFFF;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    min-height: 250px;
+    margin: 20px auto 0;
+    width: 600px;
+    padding: 10px;
+  }
+
+
+/*ADD STUDENT CSS END*/
+/* User refistration form css*/
+.user-registration-form {
+
+
+border-radius: 7px;
+border: #000 solid 2px;
+background-color: rgb(243, 236, 236);
+padding: 10px;
+width:520px;
+margin-left: 30%;
+
+}
+.user-register-page{
+ 
+  margin: 20%;
+}
+/*user registration form end*/
+/* Nav Bar css*/
+.logo-container {
+  height: 80px;
+}
+.nav-bar {
+  min-width: 50px;
+  height: 100%;
+  background-color: #009dff;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+  li {
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    border-radius: 2px;
+    .material-icons { 
+      margin-top: 5px;
+    }
+    &:hover, &.active {
+      background-color: white;
+      .material-icons {
+        color: #009dff;
+      }
+        
+    }
+  }
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*nav bar css end */
+
+/* app component css*/
+.app-container {
+  height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+/* app component end*/
+/* class-list */
+.class-list-container {
+
+  display: flex;
+  flex-direction: row
+}
+.class-list {
+  width: 30%;
+   
+    overflow-y: auto;
+    max-height: 100vh;
+   
+
+  ul{
+    
+    margin:5px 0 0 0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  li{
+    
+    list-style: none;
+    cursor: pointer;
+    /* display: inline-block; */
+    /* width: 95%; */
+    font-size: 18px;
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #d6d1d1;
+    border-left: 4px solid transparent;
+    background: #FFFFFF;
+    /* margin-left: 10px; */
+       &:hover {
+            background-color: #eaeaea;
+          }
+          &.active {
+            background-color: #DCECF9;
+            border-left: 4px solid   #3B97E0;
+
+  }
+}
+}
+/*class list css end*/
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex{
+  flex: 1;
+}
+.flex-auto {
+  flex: 0 1 auto;
+}
+
+
+
+
+/*student list css */
+
+.student-list-container{
+  width: 100%;
+   
+  overflow-y: auto;
+  max-height: 100vh;
+  .table-container {
+
+width: 100%;
+height: 100vh;
+  }
+  .row-container {
+    border: #a1a3a3;
+    background-color: white;
+    &:hover {
+      background-color: #a1a3a3;
+    }
+    &:active {
+      background-color: #a1a3a3;
+    }
+  }
+  
+}
+/*student list css end */
+/*reports css end */
+.reports-container {
+  width: 50%;
+    border: 2px solid;
+    border-radius: 7px;
+    margin-left: 10%;
+    margin-top: 2%;
+    height: 80%;
+    
+    padding: 5%;
+    .table{
+      background-color: #fbf7f7;
+      width: 100%;
+      border: 1px solid;
+    }
+    .select-container{
+      .app-select{
+        height: 37px;
+      width: 178px;
+      /* padding: 8px; */
+      padding-left: 30px;
+      /* margin: 10%; */
+      margin-left: 20%;
+      margin-top: 5%;
+      background-color: #d8d0d0;
+      }
+      
+
+    }
+}
+
+
+/*reports list css end */
 
 // inject
 // Input styles will be imported here after Gulp `styles` task.

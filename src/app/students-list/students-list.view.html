@@ -1,0 +1,52 @@
+<div class="student-list-container">
+    <form name="studentListForm" ng-submit="vm.formSub()">
+        <table class="table-container">
+            <tr class="row-container">
+                <td></td>
+                <td >RollNumber</td>
+                <td>FirstName</td>
+                <td>SecondName</td>
+            </tr>
+            <tr ng-repeat="student in vm.result" class="row-container" ng-class="{'active': vm.selectedStudentId == class.rollNmber}">
+                <td>
+                    <input type="checkbox" checklist-model="vm.selectedUsers" checklist-value="student.rollNumber" ng-click="vm.getSelectedStudents(student.rollNumber)">
+                </td>
+                <td>{{student.rollNumber}}</td>
+                <td>{{student.firstName}}</td>
+                <td>{{student.secondName}}</td>
+
+            </tr>
+        </table>
+
+        <!-- <ul>
+            <li> STUDENTS LIST</li>
+            <li>
+                <div class="rollnumber-container">
+                    RollNumber
+                </div>
+                <div class="name-container">
+                    Name
+                </div>
+            </li>
+            <li ng-repeat="x in vm.result">
+                <input type="checkbox" checklist-model="selectedUsers" checklist-value="x.rollNumber">
+                <div class="rollnumber-container">
+                    {{x.rollNumber}} </div>
+                <div class="name-container"> {{x.firstName}}</div>
+                <div class="name-container"> {{x.secondName}}</div>
+            </li>
+
+
+</ul> -->
+        {{vm.selectedUsers}}
+        <br>
+
+        <textarea ng-model="vm.message" placeholder="Enter your message" rows="4" cols="50" required></textarea>
+        <br>
+        <br> {{message}}
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+</div>

@@ -1,0 +1,22 @@
+
+ <div class="file-upload-container" >
+
+        <h1>Angular Node File Upload</h1>
+        <form   name="up.upload_form">
+            file Upload
+            <input
+                    type="file"
+                    ngf-select
+                    ng-model="vm.file"
+                    name="file"
+                    required
+            />
+   
+            <i ng-show="up.upload_form.file.$error.required">*required</i><br>
+   
+            <button type="submit"  ng-click="vm.submit()">submit</button>
+            <p>{{vm.progress}}
+        </form>
+    </div>
+   
+   

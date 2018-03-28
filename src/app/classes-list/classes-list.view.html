@@ -1,0 +1,13 @@
+<div class="class-list-container">
+<div class="class-list">
+
+    <ul>
+        <li style="font-style:Audrey;">CLASSES</li>
+        <li ng-repeat="class in vm.classes" ng-class="{'active': vm.selectedClassId == class.secId}" ng-click="vm.getStudents(class.secId)">
+            {{class.name}}
+        </li>
+
+    </ul>
+</div>
+<div class="view-container" ui-view></div>
+</div>

@@ -1,0 +1,44 @@
+
+<div class="nav-bar layout-column">
+    <div class="logo-container">
+
+
+    </div>
+        <ul class="flex">
+                <li ng-class="{'active': vm.selectedNavIndex == 1}">
+                        <a ui-sref="app.home" ng-click="vm.makeActvie(1)">
+                            <i class="material-icons">home</i>
+                        </a>
+                    </li>
+        
+            <!-- <li>
+                <a ui-sref="app.addStudent">
+                    addStudent
+                </a>
+            </li> -->
+            <li  ng-class="{'active': vm.selectedNavIndex == 2}">
+                <a ui-sref="app.classesList" ng-click="vm.makeActvie(2)">
+                        <i class="material-icons">people</i>
+                </a>
+            </li>
+            <li  ng-class="{'active': vm.selectedNavIndex == 3}">
+                <a ui-sref="app/classList/fileUpload" ng-click="vm.makeActvie(3)">
+                        <i class="material-icons">file_upload</i>
+                </a>
+            </li>
+            <li  ng-class="{'active': vm.selectedNavIndex == 4}">
+                    <a ui-sref="app.reports" ng-click="vm.makeActvie(4)">
+                            <i class="material-icons">assessment</i>
+                    </a>
+                </li>
+        </ul>
+        <ul class="flex-auto">
+            <li>
+                <a ui-sref="login">
+                        <i class="material-icons">exit_to_app</i>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>

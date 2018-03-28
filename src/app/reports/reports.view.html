@@ -1,0 +1,48 @@
+<div class="reports-container">
+        
+    <form name="reports-Form" ng-submit="vm.getReport(reports-form)" class="reports-form">
+        
+        <div class="input-container">
+            <div class="input-error">
+                <h4 ng-if="vm.error" style="color: red">{{vm.error}}</h4>
+            </div>
+
+
+            <div class="label-container">
+                <label>
+                    RollNumber
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="RollNumber" ng-change="vm.clearError()" class="app-input" id="rollnumber" ng-model="vm.rollnumber"
+                    required>
+                   
+                <div ng-if="reports-form.rollnumber.$dirty && reports-form.rollnumber.$error.required" class="help-block">RollNumber is required</div>
+                
+            </div>
+           
+        </div>
+        <div class="button-container">
+                <button type="submit" class="app-button">GET DATA </button>
+            </div>
+    </form>
+    <div class="table-comtainer" ng-if="vm.tableData">
+    <table>
+        <tr>
+            <th>subject</th>
+            <th>totalNumberOfclasses</th>
+            <th>attendedclasses</th>
+            <th>Percentage</th>
+        </tr>
+        <tr ng-repeat="sub in vm.report">
+
+            <td>{{sub.subject}}</td>
+            <td> {{sub.totalNumberOfclasses}}</td>
+            <td>{{sub.attendedclasses}}</td>
+            <td>
+                {{sub.attendedclasses/sub.totalNumberOfclasses *100}}
+            </td>
+        </tr>
+    </table>
+</div>
+</div>

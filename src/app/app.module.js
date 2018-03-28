@@ -5,6 +5,9 @@
     'pascalprecht.translate',
     'tmh.dynamicLocale',
     'ui.router',
+    'ngFileUpload',
+    'checklist-model'
+
   ]);
 
 })();
