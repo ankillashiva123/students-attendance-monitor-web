@@ -1,52 +1,40 @@
 <div class="student-list-container">
+    
     <form name="studentListForm" ng-submit="vm.formSub()">
-        <table class="table-container">
-            <tr class="row-container">
-                <td></td>
-                <td >RollNumber</td>
-                <td>FirstName</td>
-                <td>SecondName</td>
-            </tr>
-            <tr ng-repeat="student in vm.result" class="row-container" ng-class="{'active': vm.selectedStudentId == class.rollNmber}">
-                <td>
-                    <input type="checkbox" checklist-model="vm.selectedUsers" checklist-value="student.rollNumber" ng-click="vm.getSelectedStudents(student.rollNumber)">
-                </td>
-                <td>{{student.rollNumber}}</td>
-                <td>{{student.firstName}}</td>
-                <td>{{student.secondName}}</td>
+        <div class="table-container-header">
+            <table>
+                <thead>
+                    <tr>
+                        <th>select</th>
+                        <th>RollNumber</th>
+                        <th>FirstName</th>
+                        <th>SecondName</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="error-container" ng-if="vm.error">
+                <h3>there are no students to view</h3>
+            </div>
+        <div class="table-container">
+            <table>
+                <tbody>
+                    <tr ng-repeat="student in vm.result"  ng-class="{'active': vm.selectedStudentId == class.rollNmber}">
+                        <td>
+                            <input type="checkbox" checklist-model="vm.selectedUsers" checklist-value="student.rollNumber" ng-click="vm.getSelectedStudents(student.rollNumber)">
+                        </td>
+                        <td>{{student.rollNumber}}</td>
+                        <td>{{student.firstName}}</td>
+                        <td>{{student.secondName}}</td>
 
-            </tr>
-        </table>
-
-        <!-- <ul>
-            <li> STUDENTS LIST</li>
-            <li>
-                <div class="rollnumber-container">
-                    RollNumber
-                </div>
-                <div class="name-container">
-                    Name
-                </div>
-            </li>
-            <li ng-repeat="x in vm.result">
-                <input type="checkbox" checklist-model="selectedUsers" checklist-value="x.rollNumber">
-                <div class="rollnumber-container">
-                    {{x.rollNumber}} </div>
-                <div class="name-container"> {{x.firstName}}</div>
-                <div class="name-container"> {{x.secondName}}</div>
-            </li>
-
-
-</ul> -->
-        {{vm.selectedUsers}}
-        <br>
-
-        <textarea ng-model="vm.message" placeholder="Enter your message" rows="4" cols="50" required></textarea>
-        <br>
-        <br> {{message}}
-        <br>
-        <br>
-        <input type="submit">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="textarea-container">
+            <textarea class="app-textarea" ng-model="vm.message" placeholder="Enter your message" rows="4" cols="50" required></textarea>
+            <button type="submit" class="app-button"> Submit</button>
+        </div>
+        
     </form>
-
 </div>

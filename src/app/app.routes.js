@@ -35,7 +35,10 @@
         })
         .state("app.classesList.studentsList",{
             url:"/studentsList",
-            component: 'studentsList'
+            component: 'studentsList',
+            params: {
+                classId: null
+            },
         })
         .state("app.classesList.fileUpload",{
             url:"/fileUpload",
@@ -66,7 +69,7 @@
       */
 
 
-        $urlRouterProvider.otherwise('/userRegistration');
+        $urlRouterProvider.otherwise('/login');
     }
 
 })();

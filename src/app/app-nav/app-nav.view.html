@@ -6,7 +6,7 @@
     </div>
         <ul class="flex">
                 <li ng-class="{'active': vm.selectedNavIndex == 1}">
-                        <a ui-sref="app.home" ng-click="vm.makeActvie(1)">
+                        <a ui-sref="app.home" ng-click="vm.makeActvie(1,app.home)">
                             <i class="material-icons">home</i>
                         </a>
                     </li>
@@ -17,12 +17,12 @@
                 </a>
             </li> -->
             <li  ng-class="{'active': vm.selectedNavIndex == 2}">
-                <a ui-sref="app.classesList" ng-click="vm.makeActvie(2)">
+                <a  ng-click="vm.makeActvie(2, 'app.classesList')">
                         <i class="material-icons">people</i>
                 </a>
             </li>
             <li  ng-class="{'active': vm.selectedNavIndex == 3}">
-                <a ui-sref="app/classList/fileUpload" ng-click="vm.makeActvie(3)">
+                <a ng-click="vm.makeActvie(3,'app.classesList.fileUpload')">
                         <i class="material-icons">file_upload</i>
                 </a>
             </li>
