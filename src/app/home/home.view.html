@@ -1,8 +1,8 @@
 <div class="home-container">
     <h1>wecome to homepage</h1>
-    <video
-  src="https://www.youtube.com/watch?v=ZiL0kggTphE"
-  poster="nice-default.jpg
-  autoplay
-/>
+    <div class="container slider">
+        <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+             ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+   
 </div>

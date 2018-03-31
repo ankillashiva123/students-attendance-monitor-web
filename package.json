@@ -3,6 +3,7 @@
   "version": "0.6.0",
   "description": "Clean but full featured AngularJS boilerplate using Gulp workflow and best practicies",
   "scripts": {
+    "start" : "node server.js",
     "docs:gulp": "gulpdoc ./gulp/*.js",
     "lint": "eslint ./gulpfile.js ./gulp/ ./src/ ./test/",
     "update": "ncu -a",
@@ -33,6 +34,10 @@
     "url": "https://github.com/1oginov/Angular-Gulp-Boilerplate/issues"
   },
   "homepage": "https://github.com/1oginov/Angular-Gulp-Boilerplate",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "chalk": "~1.1.1",
@@ -69,6 +74,7 @@
     "http-proxy-middleware": "^0.18.0",
     "main-bower-files": "^2.13.1",
     "npm-check-updates": "^2.14.1",
+    "nodemon": "1.14.11",
     "wiredep": "^4.0.0"
   }
 }

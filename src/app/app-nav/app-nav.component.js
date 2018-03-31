@@ -16,7 +16,7 @@
     vm.$onInit = $onInit;
     function $onInit(){
 
-      vm.selectedNavIndex = index;
+      vm.selectedNavIndex = 1;
       $state.go('home');
     }
 
