@@ -6,16 +6,16 @@
             <h1>Student Registration</h1>
 
         </div>
-        <p id="failure ">Oopsie...message not sent.</p>
-        <p id="success ">Your message was sent successfully. Thank you!</p>
+        <p id="failure ">{{vm.error}}</p>
+        <p ng-if="vm.success"  ><h2>Your message was sent successfully. Thank you!</h2></p>
 
-        <form name="addStudent1 " ng-submit="addStudent(addStudent1) " class="student-register-form ">
+        <form name="addStudent1 " ng-submit="vm.addStudent() " class="student-register-form ">
             <div classs="label-container ">
                 <label for="firstname ">
                     FirstName: * </label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="text " ng-model="firstname " id="firstname " name="name
+                <input class="app-input " type="text " ng-model="vm.firstname " id="firstname " name="name
     "  placeholder="Your Name " required="required " tabindex="1 " autofocus="autofocus " />
 
             </div>
@@ -24,7 +24,7 @@
                     secondName: *</label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="text " ng-model="secondname " id="secondname " name="secondname
+                <input class="app-input " type="text " ng-model="vm.secondname " id="secondname " name="secondname
     "  placeholder="Your Name " required="required " tabindex="1 " autofocus="autofocus " />
 
             </div>
@@ -33,7 +33,19 @@
                     RollNo: *</label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="text " id="rollnumber " ng-model="rollnumber " name="rollnumber
+                <input class="app-input " type="text " id="rollnumber " ng-model="vm.rollnumber " name="rollnumber
+    "  placeholder="Your RollNo " required="required " tabindex="1 " autofocus="autofocus " />
+            </div>
+            <div classs="label-container ">
+                <label for="rollnumber ">
+                    Deparrment: *</label>
+            </div>
+            <div classs="label-container ">
+                <label for="rollnumber " classs="label-container ">
+                    RollNo: *</label>
+            </div>
+            <div class="input-container ">
+                <input class="app-input " type="text " id="rollnumber " ng-model="vm.rollnumber " name="rollnumber
     "  placeholder="Your RollNo " required="required " tabindex="1 " autofocus="autofocus " />
             </div>
             <div classs="label-container ">
@@ -41,18 +53,29 @@
                     Deparrment: *</label>
             </div>
             <div class="input-select-container ">
-                    <select class="form-control " ng-model="department ">
+                    <select class="form-control " ng-model="vm.department ">
                         <option value=" " disabled selected>Please select department</option>
                         <option ng-repeat="dept in vm.depts "> {{dept}}
                         </option>
                     </select>
                 </div>
+                <div classs="label-container ">
+                    <label for="rollnumber ">
+                        class: *</label>
+                </div>
+                <div class="input-select-container ">
+                        <select class="form-control " ng-model="vm.department ">
+                            <option value=" " disabled selected>Please select department</option>
+                            <option ng-repeat="dept in vm.classes "> {{dept.name}}
+                            </option>
+                        </select>
+                    </div>
             <div class="label-container ">
                 <label for="email " classs="label-container ">
                     Email: * </label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="email " ng-model="email " id="email " name="email "  placeholder="Your
+                <input class="app-input " type="email " ng-model="vm.email" id="email " name="email "  placeholder="Your
     Email " tabindex="2 " required="required "/>
 
             </div>
@@ -61,7 +84,7 @@
                     ContactNumber: *</label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="number " ng-model="contactnumber " id="contactnumber " name="contactnumber
+                <input class="app-input " type="number " ng-model="vm.contactnumber" id="contactnumber " name="contactnumber
     "  placeholder="Your Number " tabindex="2 " required="required " />
 
             </div>
@@ -70,7 +93,7 @@
                     EmegencyNumber: * </label>
             </div>
             <div class="input-container ">
-                <input class="app-input " type="number " id="EmegencyNumber " ng-model="EmegencyNumber " name="EmegencyNumber
+                <input class="app-input " type="number " id="EmegencyNumber " ng-model="vm.EmegencyNumber" name="EmegencyNumber
     " placeholder="Your Number "  tabindex="2 " required="required " />
 
             </div>

@@ -1,6 +1,8 @@
 <div class="student-list-container">
+    <div ng-if="vm.success"><h2>Attendance has bess taken successfully</h2></div>
     
-    <form name="studentListForm" ng-submit="vm.formSub()">
+    <form name="studentListForm" ng-submit="vm.formSub()" ng-if=" vm.studentListForm">
+        
         <div class="table-container-header">
             <table>
                 <thead>
