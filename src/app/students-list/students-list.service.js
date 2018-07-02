@@ -15,7 +15,7 @@ angular.module('app').service("studentsListService", function ($http) {
     }
     this.getData = function (classId) {
 
-        return $http.get("http://localhost:3000/studentsList/" + classId)
+        return $http.get("http://https://student-attendance-services.herokuapp.com/studentsList/" + classId)
             .then(function (posRes) {
                 return posRes.data;
             }).catch(function (err) {
