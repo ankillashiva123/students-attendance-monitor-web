@@ -7,7 +7,7 @@
         .module('app')
         .service('loginservice', function ($http) {
             this.checkCredentials = function (arg, callback) {
-                return $http.post('http://localhost:3000/auth/sign_in', arg)
+                return $http.post('http://https://student-attendance-services.herokuapp.com/auth/sign_in', arg)
                     .then(function (response) {
                         // login successful if there's a token in the response
                         if (response.data.token) {
