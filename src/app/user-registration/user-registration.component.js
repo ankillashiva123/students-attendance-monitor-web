@@ -49,7 +49,7 @@
     function userRegistrationService($http) {
 
         this.addUser = function (arg, callback) {
-            return $http.post('http://localhost:3000/auth/register', arg)
+            return $http.post('http://https://student-attendance-services.herokuapp.com/auth/register', arg)
                 .then(function (response) {
                    
                     callback(true);
